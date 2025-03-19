@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <link rel="stylesheet" type="text/css" href="addressPage.css" />
+  <script src="addressPage.js"></script>
+
 
 <h1>Checkout</h1>
-<button onclick="openPopup()">Add Address</button>
+<button onclick="openForm()">Add Address</button>
+<h3>Current Address: </h3>
 
 </body>
 </html>
@@ -12,13 +16,25 @@
     <form action="/action_page.php" class="form-container">
       <h1>Login</h1>
   
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="Country/Region"><b>Country/Region</b></label>
+      <select list="locations" name="location" required>
+        <option value="" disabled selected>Select your country/region</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="Mexico">Mexico</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+        <option value="India">India</option>
+    </select>
   
-      <label for="psw"><b>Password</b></label>
+      <label for="Full Name (First and Last Name)"><b>Full Name (First and Last Name)</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="Full Name (First and Last Name)"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
   
-      <button type="submit" class="btn">Login</button>
+      <button type="Close" class="btn">Save</button>
       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>

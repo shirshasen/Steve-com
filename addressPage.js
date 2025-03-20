@@ -18,8 +18,13 @@ function openForm() {
     var city = document.getElementById("city").value;
     var zipcode = document.getElementById("zip").value;
 
-    var formattedAddress = name + "<br>" + phone + "<br><br>" + country + "<br>" + address1 + address2 + "<br>" + city + "<br>" + zipcode;
+    if (!address2.trim()) {
+      var formattedAddress = name + "<br>" + phone + "<br><br>" + country + "<br>" + address1 + "<br>" + city + "<br>" + zipcode;
+    } else {
+      var formattedAddress = name + "<br>" + phone + "<br><br>" + country + "<br>" + address1 + " (" + address2 + ")<br>" + city + "<br>" + zipcode;
 
+    }
+  
     console.log(formattedAddress);
     document.getElementById("addressVal").innerHTML = formattedAddress;
 

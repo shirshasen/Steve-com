@@ -6,18 +6,22 @@
 
 
 <h1>Checkout</h1>
-<button onclick="openForm()">Add Address</button>
-<h3>Current Address: </h3>
+<button onclick="openForm()">Add/Change Address</button>
+<h3>Current Recipient Information: </h3>
+<h4><span id="addressVal"></span></h4>
+<script id="starting">
+  var currentAddress = "Unknown Recipient<br>Unknown Address<br>Unknown Phone Number";
 
-</body>
-</html>
+  // Insert the value into the span
+  document.getElementById("addressVal").innerHTML = currentAddress;
+</script>
 
 <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Login</h1>
+    <form id="addressForm" class="form-container" action="javascript:updateAddress()">
+      <h2>Add/Change Address</h2>
   
-      <label for="Country/Region"><b>Country/Region</b></label>
-      <select list="locations" name="location" required>
+    <label for="region"><b>Country/Region</b></label>
+      <select id="region" list="locations" required>
         <option value="" disabled selected>Select your country/region</option>
         <option value="United States">United States</option>
         <option value="Canada">Canada</option>
@@ -28,13 +32,28 @@
         <option value="India">India</option>
     </select>
   
-      <label for="Full Name (First and Last Name)"><b>Full Name (First and Last Name)</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="customer name"><b>Full Name (First and Last Name): </b></label>
+      <input id="name" type="text" placeholder="Full Name" required>
 
-      <label for="Full Name (First and Last Name)"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="phone"><b>Phone Number: </b></label>
+      <input id="phone" type="tel" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
   
-      <button type="Close" class="btn">Save</button>
+      <label for="address1"><b>Street Address or PO Box: </b></label>
+      <input id="address1" type="text" required>
+
+      <label for="address2"><b>Apt, suite, unit, building, floor, etc. : </b></label>
+      <input id="address2" type="text">
+
+      <label for="city"><b>City, State/Providence: </b></label>
+      <input id="city" type="text" placeholder="EX: Hoboken, New Jersey" required>
+
+      <label for="zipcode"><b>ZIP Code: </b></label>
+      <input id="zip" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" >
+
+      <button type="submit" class="btn">Save</button>
       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
+
+</body>
+</html>

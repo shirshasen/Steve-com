@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+
 <body>
   <link rel="stylesheet" type="text/css" href="addressPage.css" />
   <script src="addressPage.js"></script>
 
 
-<h1>Checkout</h1>
-<button onclick="openForm()">Add/Change Address</button>
-<h3>Current Recipient Information: </h3>
-<h4><span id="addressVal"></span></h4>
-<script id="starting">
-  var currentAddress = "Unknown Recipient<br>Unknown Address<br>Unknown Phone Number";
+<h1 id="title">Checkout 🛒</h1>
+
+<button class="red-button" onclick="openSendForm()">Add/Change Recipient Address</button>
+<h3 class="sub-titles">Current Recipient Address Information: </h3>
+<h4><span id="sendAddressVal"></span></h4>
+<script id="startRecip">
+  var currentAddress1 = "Unknown Recipient<br>Unknown Address<br>Unknown Phone Number";
 
   // Insert the value into the span
-  document.getElementById("addressVal").innerHTML = currentAddress;
+  document.getElementById("sendAddressVal").innerHTML = currentAddress1;
 </script>
 
-<div class="form-popup" id="myForm">
-    <form id="addressForm" class="form-container" action="javascript:updateAddress()">
-      <h2>Add/Change Address</h2>
+<button class="red-button" onclick="openBillForm()">Add/Change Billing Address</button>
+<h3 class="sub-titles">Current Billing Address Information: </h3>
+<h4><span id="billAddressVal"></span></h4>
+<script id="startBill">
+  var currentAddress2 = "Unknown Recipient<br>Unknown Address<br>Unknown Phone Number";
+
+  // Insert the value into the span
+  document.getElementById("billAddressVal").innerHTML = currentAddress2;
+</script>
+
+<div class="form-popup" id="sendForm">
+    <form id="sendAddressForm" class="form-container" action="javascript:updateSendAddress()">
+      <h3 style="color:#C70039">Add/Change Recipient Address</h3>
   
-    <label for="region"><b>Country/Region</b></label>
-      <select id="region" list="locations" required>
+    <label for="region"><b>Country/Region:</b></label>
+      <select class="dropdown" id="region1" list="locations" required>
         <option value="" disabled selected>Select your country/region</option>
         <option value="United States">United States</option>
         <option value="Canada">Canada</option>
@@ -30,28 +47,82 @@
         <option value="Australia">Australia</option>
         <option value="Germany">Germany</option>
         <option value="India">India</option>
-    </select>
+    </select><br><br>
   
       <label for="customer name"><b>Full Name (First and Last Name): </b></label>
-      <input id="name" type="text" placeholder="Full Name" required>
+      <input id="name1" type="text" placeholder="Full Name" required><br>
 
       <label for="phone"><b>Phone Number: </b></label>
-      <input id="phone" type="tel" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-  
+      <input id="phone1" type="tel" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <br><br>
+
       <label for="address1"><b>Street Address or PO Box: </b></label>
-      <input id="address1" type="text" required>
+      <input id="address1Recip" type="text" required>
+      <br>
 
       <label for="address2"><b>Apt, suite, unit, building, floor, etc. : </b></label>
-      <input id="address2" type="text">
+      <input id="address2Recip" type="text">
+      <br>
 
       <label for="city"><b>City, State/Providence: </b></label>
-      <input id="city" type="text" placeholder="EX: Hoboken, New Jersey" required>
+      <input id="city1" type="text" placeholder="EX: Hoboken, New Jersey" required>
+      <br>
 
       <label for="zipcode"><b>ZIP Code: </b></label>
-      <input id="zip" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" >
+      <input id="zip1" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" >
+      <br>
+
+      <input type="checkbox" id="same-address" name="same-address">
+      <label for="same-address">Shipping address is same as billing adddress</label>
+      <br></br>
 
       <button type="submit" class="btn">Save</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      <button type="button" class="btn cancel" onclick="closeSendForm()">Close</button>
+    </form>
+  </div>
+
+  <div class="form-popup" id="billForm">
+    <form id="sendBillForm" class="form-container" action="javascript:updateBillAddress()">
+      <h3 style="color:#C70039">Add/Change Billing Address</h3>
+  
+    <label for="region"><b>Country/Region:</b></label>
+      <select class="dropdown" id="region2" list="locations" required>
+        <option value="" disabled selected>Select your country/region</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="Mexico">Mexico</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+        <option value="India">India</option>
+    </select><br><br>
+  
+      <label for="customer name"><b>Full Name (First and Last Name): </b></label>
+      <input id="name2" type="text" placeholder="Full Name" required>
+      <br>
+
+      <label for="phone"><b>Phone Number: </b></label>
+      <input id="phone2" type="tel" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <br><br>
+
+      <label for="address1"><b>Street Address or PO Box: </b></label>
+      <input id="address1Bill" type="text" required>
+      <br>
+
+      <label for="address2"><b>Apt, suite, unit, building, floor, etc. : </b></label>
+      <input id="address2Bill" type="text">
+      <br>
+
+      <label for="city"><b>City, State/Providence: </b></label>
+      <input id="city2" type="text" placeholder="EX: Hoboken, New Jersey" required>
+      <br>
+
+      <label for="zipcode"><b>ZIP Code: </b></label>
+      <input id="zip2" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" >
+      <br>
+
+      <button type="submit" class="btn">Save</button>
+      <button type="button" class="btn cancel" onclick="closeBillForm()">Close</button>
     </form>
   </div>
 

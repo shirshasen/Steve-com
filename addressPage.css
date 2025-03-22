@@ -1,3 +1,42 @@
+body {
+  font-family: Lato; 
+}
+
+#title {
+  color: #C70039 ;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sub-titles {
+  color: #C70039 ;
+}
+
+.red-button {
+  background-color: #e63946; /* Red background */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add spacing inside the button */
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth effect */
+}
+
+.red-button:hover {
+  background-color: #d62839; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly grow the button */
+}
+
+.red-button:active {
+  transform: scale(0.95); /* Slightly shrink the button when clicked */
+}
+
+.dropdown {
+  border-radius: 5px;
+  height:20px;
+}
 
 /* The popup form - hidden by default */
 .form-popup {
@@ -6,49 +45,61 @@
   top: 50%; /* Position 50% from the top */
   left: 50%; /* Position 50% from the left */
   transform: translate(-50%, -50%); /* Center the form */
-  border: 3px solid #f1f1f1;
+  border: 3px solid #696969;
   z-index: 9;
+  width: 90%; /* Adjust width to fit smaller screens, maxed below */
+  max-width: 400px; /* Prevent the form from growing too wide */
+  max-height: 90vh; /* Limit the height to 90% of the viewport */
+  height: auto; /* Allow flexible height based on content */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+  background-color: white;
+  border-radius: 10px; /* Modern rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+  padding: 20px; /* Spacing inside the form */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], 
+.form-container input[type=password] {
   width: 100%;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+  height: 30px; /* Increase for readability */
+  margin: 10px 0 22px 0; /* Spacing between fields */
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background: #f9f9f9; 
+  padding: 5px;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+/* Focus style for input fields */
+.form-container input[type=text]:focus, 
+.form-container input[type=password]:focus {
+  background-color: #e6e6e6; 
+  outline: 2px solid #C70039; 
 }
 
-/* Set a style for the submit/login button */
+/* Style for buttons */
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
-  padding: 16px 20px;
+  padding: 12px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  width: 100%; 
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.9;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px; 
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
 }

@@ -9,13 +9,15 @@
 <body>
     <div class="wrapper">
         <div class="title-text">
-            <div class="title login">Login Form</div>
-            <div class="title signup">Signup Form</div>
+            <div class="title login">Login</div>
+            <div class="title signup">Signup</div>
         </div>
         <div class="form-container">
             <div class="slide-controls">
-                <label for="" class="slide login">Login</label>
-                <label for="" class="slide signup">signup</label>
+                <input type="radio" name="slider" id="login" checked>
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">signup</label>
                 <div class="slide-tab"></div>
             </div>
             <div class="form-inner">
@@ -26,7 +28,7 @@
                     <div class="field">
                         <input type="text" placeholder="Password" required>
                     </div>
-                    <div class="pass-link"><a href="#">Forgot Password?</a></div>
+                    <!-- <div class="pass-link"><a href="#">Forgot Password?</a></div> -->
                     <div class="field">
                         <input type="submit" value="Login">
                     </div>
@@ -49,5 +51,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

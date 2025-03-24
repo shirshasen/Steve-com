@@ -3,54 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and sign up page</title>
+    <title>Login and Sign Up Page</title>
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
+        <!-- Title section for Login and Signup -->
         <div class="title-text">
             <div class="title login">Login</div>
             <div class="title signup">Signup</div>
         </div>
         <div class="form-container">
+            <!-- Slide controls for toggling between Login and Signup forms -->
             <div class="slide-controls">
+                <!-- Radio buttons to control the slider -->
                 <input type="radio" name="slider" id="login" checked>
                 <input type="radio" name="slider" id="signup">
+                <!-- Labels for the radio buttons -->
                 <label for="login" class="slide login">Login</label>
-                <label for="signup" class="slide signup">signup</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <!-- Slider tab for visual effect -->
                 <div class="slide-tab"></div>
             </div>
             <div class="form-inner">
+                <!-- Login form -->
                 <form action="#" class="login">
                     <div class="field">
+                        <!-- Input field for email address -->
                         <input type="text" placeholder="Email Address" required>
                     </div>
                     <div class="field">
+                        <!-- Input field for password -->
                         <input type="text" placeholder="Password" required>
                     </div>
+                    <!-- Uncomment the following line if "Forgot Password" functionality is added -->
                     <!-- <div class="pass-link"><a href="#">Forgot Password?</a></div> -->
                     <div class="field">
+                        <!-- Submit button for login -->
                         <input type="submit" value="Login">
                     </div>
-                    <div class="signup-link">Not a member? <a href="#">Signup</a></div>
+                    <div class="signup-link">
+                        <!-- Link to switch to the Signup form -->
+                        Not a member? <a href="#">Signup</a>
+                    </div>
                 </form>
+                <!-- Signup form -->
                 <form action="#" class="signup">
                     <div class="field">
+                        <!-- Input field for email address -->
                         <input type="text" placeholder="Email Address" required>
                     </div>
                     <div class="field">
+                        <!-- Input field for password -->
                         <input type="text" placeholder="Password" required>
                     </div>
                     <div class="field">
+                        <!-- Input field for confirming password -->
                         <input type="text" placeholder="Confirm password" required>
                     </div>
                     <div class="field">
+                        <!-- Submit button for signup -->
                         <input type="submit" value="Signup">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <!-- Link to the external JavaScript file for functionality -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,41 +1,46 @@
-*{
+/* General reset for margins, paddings, and box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-html,body{
+/* Center the content vertically and horizontally */
+html, body {
     display: grid;
     height: 100%;
     place-items: center;
     background: #f2f2f2;
-    
 }
 
-.wrapper{
+/* Wrapper for the entire form */
+.wrapper {
     overflow: hidden;
     max-width: 390px;
     background: #fff;
     padding: 30px;
     border-radius: 5px;
-    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper .title-text{
+/* Title section for Login and Signup */
+.wrapper .title-text {
     display: flex;
     width: 200%;
     overflow: hidden;
 }
 
-.wrapper .title-text .title{
+/* Individual titles for Login and Signup */
+.wrapper .title-text .title {
     width: 50%;
     font-size: 35px;
     font-weight: 600;
     text-align: center;
 }
 
-.form-container .slide-controls{
+/* Slide controls for toggling forms */
+.form-container .slide-controls {
     position: relative;
     display: flex;
     height: 50px;
@@ -47,7 +52,8 @@ html,body{
     border: 1px solid lightgrey;
 }
 
-.slide-controls .slide{
+/* Styling for the slider buttons */
+.slide-controls .slide {
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -59,11 +65,13 @@ html,body{
     cursor: pointer;
 }
 
-.slide-controls .signup{
+/* Default color for Signup button */
+.slide-controls .signup {
     color: #000;
 }
 
-.slide-controls .slide-tab{
+/* Slider tab animation */
+.slide-controls .slide-tab {
     position: absolute;
     height: 100%;
     width: 50%;
@@ -90,17 +98,20 @@ input[type="radio"]{
     color:#000;
 }
 
-.wrapper .form-container{
+/* Form container for Login and Signup */
+.wrapper .form-container {
     width: 100%;
     overflow: hidden;
 }
 
-.form-container .form-inner{
+/* Form inner container for sliding effect */
+.form-container .form-inner {
     display: flex;
     width: 200%;
 }
 
-.form-container .form-inner form{
+/* Individual form styling */
+.form-container .form-inner form {
     width: 50%;
 }
 
@@ -110,7 +121,8 @@ input[type="radio"]{
     margin-top: 20px;
 }
 
-.form-inner form .field input{
+/* Input field styling */
+.form-inner form .field input {
     height: 100%;
     width: 100%;
     outline: none;
@@ -122,7 +134,8 @@ input[type="radio"]{
     transition: all 0.4s ease;
 }
 
-.form-inner form .field input:focus{
+/* Focus effect for input fields */
+.form-inner form .field input:focus {
     border-color: #a32638;
 }
 
@@ -144,11 +157,11 @@ input[type="radio"]{
     text-decoration: underline;
 }
 
-.form-inner form .field input[type="submit"]{
-    color:#fff;
+/* Submit button styling */
+.form-inner form .field input[type="submit"] {
+    color: #fff;
     font-size: 20px;
     font-weight: 500;
-    padding-left: 0px;
     border: none;
     cursor: pointer;
     background: #a32638;

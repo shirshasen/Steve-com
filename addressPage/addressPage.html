@@ -1,3 +1,5 @@
+<!-- Humna Sultan ; CS55 Final Proj. Steve-Con -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   </head>
+  <!-- imports cool font for use (Lato) -->
 
 <body>
   <link rel="stylesheet" type="text/css" href="addressPage.css" />
@@ -13,28 +16,34 @@
 
 <h1 id="title">Checkout 🛒</h1>
 
-<button class="red-button" onclick="openSendForm()">Add/Change Recipient Address</button>
+<button class="openForm-button" onclick="openSendForm()">Add/Change Recipient Address</button>
 <h3 class="sub-titles">Current Recipient Address Information: </h3>
 <h4><span id="sendAddressVal"></span></h4>
+<!-- will be replaced with address value whenever the user submits the form -->
 <script id="startRecip">
   var currentAddress1 = "Unknown Recipient<br>Unknown Address<br>Unknown Phone Number";
-
-  // Insert the value into the span
+  // refers to recipient address
+  
+  // insert the blank values (currentAddress1) into the page
   document.getElementById("sendAddressVal").innerHTML = currentAddress1;
 </script>
 
-<button class="red-button" onclick="openBillForm()">Add/Change Billing Address</button>
+<button class="openForm-button" onclick="openBillForm()">Add/Change Billing Address</button>
 <h3 class="sub-titles">Current Billing Address Information: </h3>
 <h4><span id="billAddressVal"></span></h4>
+<!-- will be replaced with address value whenever the user submits the form -->
 <script id="startBill">
   var currentAddress2 = "Unknown Recipient<br>Unknown Address<br>Unknown Phone Number";
-
-  // Insert the value into the span
+  // refers to billing address
+  
+  // insert the blank values (currentAddress2) into the page
   document.getElementById("billAddressVal").innerHTML = currentAddress2;
 </script>
 
 <div class="form-popup" id="sendForm">
+  <!-- recipient address form -->
     <form id="sendAddressForm" class="form-container" action="javascript:updateSendAddress()">
+      <!-- updates the data on the page by calling updateSendAddress() JS function -->
       <h3 style="color:#C70039">Add/Change Recipient Address</h3>
   
     <label for="region"><b>Country/Region:</b></label>
@@ -69,7 +78,7 @@
       <br>
 
       <label for="zipcode"><b>ZIP Code: </b></label>
-      <input id="zip1" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" >
+      <input id="zip1" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" required>
       <br>
 
       <input type="checkbox" id="same-address" name="same-address">
@@ -81,10 +90,12 @@
     </form>
   </div>
 
-  <div class="form-popup" id="billForm">
+<div class="form-popup" id="billForm">
+  <!-- billing address form -->
     <form id="sendBillForm" class="form-container" action="javascript:updateBillAddress()">
+      <!-- updates the data on the page by calling updateBillAddress() JS function -->
       <h3 style="color:#C70039">Add/Change Billing Address</h3>
-  
+
     <label for="region"><b>Country/Region:</b></label>
       <select class="dropdown" id="region2" list="locations" required>
         <option value="" disabled selected>Select your country/region</option>
@@ -96,7 +107,7 @@
         <option value="Germany">Germany</option>
         <option value="India">India</option>
     </select><br><br>
-  
+
       <label for="customer name"><b>Full Name (First and Last Name): </b></label>
       <input id="name2" type="text" placeholder="Full Name" required>
       <br>
@@ -118,13 +129,13 @@
       <br>
 
       <label for="zipcode"><b>ZIP Code: </b></label>
-      <input id="zip2" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" >
+      <input id="zip2" type="text" pattern="[0-9]{5}" placeholder="EX: 07030" required>
       <br>
 
       <button type="submit" class="btn">Save</button>
       <button type="button" class="btn cancel" onclick="closeBillForm()">Close</button>
     </form>
-  </div>
+</div>
 
 </body>
 </html>

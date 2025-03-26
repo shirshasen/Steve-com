@@ -1,6 +1,8 @@
+/* Humna Sultan ; CS55 Final Proj. Steve-Con */
 body {
   font-family: Lato; 
 }
+/* changing font of the whole page to be the same */
 
 #title {
   color: #C70039 ;
@@ -11,10 +13,11 @@ body {
 .sub-titles {
   color: #C70039 ;
 }
+/* both titles and subtitles of page will be red! */
 
-.red-button {
-  background-color: #e63946; /* Red background */
-  color: #ffffff; /* White text */
+.openForm-button {
+  background-color: #e63946;
+  color: #ffffff;
   border: none; /* Remove border */
   padding: 10px 20px; /* Add spacing inside the button */
   font-size: 16px; /* Text size */
@@ -24,12 +27,12 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth effect */
 }
 
-.red-button:hover {
+.openForm-button:hover {
   background-color: #d62839; /* Darker red on hover */
   transform: scale(1.05); /* Slightly grow the button */
 }
 
-.red-button:active {
+.openForm-button:active {
   transform: scale(0.95); /* Slightly shrink the button when clicked */
 }
 
@@ -38,7 +41,7 @@ body {
   height:20px;
 }
 
-/* The popup form - hidden by default */
+/* The popup form - hidden by default, opens when the user hits openForm-button */
 .form-popup {
   display: none;
   position: fixed;
@@ -64,7 +67,7 @@ body {
   box-sizing: border-box; /* Include padding and border in width/height */
 }
 
-/* Full-width input fields */
+/* Full-width input fields for form entries */
 .form-container input[type=text], 
 .form-container input[type=password] {
   width: 100%;
@@ -76,14 +79,14 @@ body {
   padding: 5px;
 }
 
-/* Focus style for input fields */
+/* Focus style for input fields  in form */
 .form-container input[type=text]:focus, 
 .form-container input[type=password]:focus {
   background-color: #e6e6e6; 
   outline: 2px solid #C70039; 
 }
 
-/* Style for buttons */
+/* Style for buttons in form */
 .form-container .btn {
   background-color: #04AA6D;
   color: white;

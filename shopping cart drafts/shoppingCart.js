@@ -1,3 +1,5 @@
+// Humna Sultan ; CS55 Final Proj. Steve-Con
+
 // declare dictionary
 // keys = items; values = quantities of items
 

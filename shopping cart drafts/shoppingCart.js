@@ -19,6 +19,20 @@ def addToCart():
     find which item was added to card through id access
     have the value associated with the item key +=1
     displayItem() // to check if the visibility of any items needs to be changed
+
+    BASIC CODE -
+        let itemElement = document.getElementById(itemId);
+        
+        if (cart[itemId]) {
+            // Increment the value associated with the item key
+            cart[itemId] += 1;
+        } else {
+            // If the item is not already in the cart, add it with an initial value of 1
+            cart[itemId] = 1;
+        }
+
+        // Check visibility or update the item
+        displayItem(itemElement, cart[itemId]);
 */
 
 /* 

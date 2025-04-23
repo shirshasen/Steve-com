@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>steve.com</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="website.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="website.html">
+          <img src="stevenslogo.png" width="28" height="26" class="d-inline-block align-text-top" alt="logo"> STEVE
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="website.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Category</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+                <li><a class="dropdown-item" href="clothing.html">Clothing</a></li>
+                <li><a class="dropdown-item" href="shoes.html">Shoes</a></li>
+                <li><a class="dropdown-item" href="#grocery.html">Grocery</a></li>
+                <li><a class="dropdown-item" href="homeappliances.html">Home Appliances</a></li>
+                <li><a class="dropdown-item" href="kidswear.html">Kids Wear</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-warning" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <ul class="navbar-nav ms-3">
+            <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="caroselsize">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="carosel1.webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="carosel2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="carosel3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+
+    <!-- Products -->
+     <div id="cardimg">
+    <div class="container mt-4">
+      <div class="row g-4">
+
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="mbam1.jpeg" class="card-img-top" alt="Macbook">
+            <div class="card-body">
+              <h5 class="card-title">Apple Macbook Air M4 256GB</h5>
+              <p class="text-danger fw-bold">$999.99</p>
+              <button class="btn btn-primary w-100 mb-2" data-bs-toggle="collapse" data-bs-target="#product1">View More</button>
+              <div class="collapse" id="product1">
+                <p>13-inch display, M4 chip, 8GB RAM, 256GB SSD</p>
+                <label class="form-label">Quantity</label>
+                <select class="form-select mb-2">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                </select>
+                <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="nikeaf1.jpeg" class="card-img-top" alt="Nike Shoes">
+            <div class="card-body">
+              <h5 class="card-title">Nike Airforce1</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <button class="btn btn-primary w-100 mb-2" data-bs-toggle="collapse" data-bs-target="#product2">View More</button>
+              <div class="collapse" id="product2">
+                <p>Stylish sneakers, cushioned sole, perfect for everyday wear.</p>
+                <label class="form-label">Quantity</label>
+                <select class="form-select mb-2">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                </select>
+                <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="samsungs24.jpeg" class="card-img-top" alt="SAMSUNG S24 ULTRA">
+            <div class="card-body">
+              <h5 class="card-title">SAMSUNG S24 ULTRA</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+              <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="samsungs24.jpeg" class="card-img-top" alt="SAMSUNG S24 ULTRA">
+            <div class="card-body">
+              <h5 class="card-title">SAMSUNG S24 ULTRA</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+              <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="samsungs24.jpeg" class="card-img-top" alt="SAMSUNG S24 ULTRA">
+            <div class="card-body">
+              <h5 class="card-title">SAMSUNG S24 ULTRA</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+              <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="samsungs24.jpeg" class="card-img-top" alt="SAMSUNG S24 ULTRA">
+            <div class="card-body">
+              <h5 class="card-title">SAMSUNG S24 ULTRA</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+              <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="samsungs24.jpeg" class="card-img-top" alt="SAMSUNG S24 ULTRA">
+            <div class="card-body">
+              <h5 class="card-title">SAMSUNG S24 ULTRA</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+              <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="samsungs24.jpeg" class="card-img-top" alt="SAMSUNG S24 ULTRA">
+            <div class="card-body">
+              <h5 class="card-title">SAMSUNG S24 ULTRA</h5>
+              <p class="text-danger fw-bold">$149.99</p>
+              <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+              <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="tshirt.jpeg" class="card-img-top" alt="Tshirt">
+            <div class="card-body">
+              <h5 class="card-title">Men's Nike T-shirt</h5>
+              <p class="text-danger fw-bold">$39.99</p>
+              
+                <a href="cart.html" class="btn btn-success w-100 mb-2"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                <a href="#" class="btn btn-warning w-100"><i class="fas fa-bolt"></i> Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+     </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-dark pt-5 pb-4 mt-5">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <!-- About -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-primary">STEVE</h5>
+            <p>Your one-stop destination for electronics, fashion, and more. Quality products delivered to your door.</p>
+          </div>
+          <!-- Categories -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-primary">Categories</h5>
+            <p><a href="electronics.html" class="text-dark text-decoration-none">Electronics</a></p>
+            <p><a href="#" class="text-dark text-decoration-none">Shoes</a></p>
+            <p><a href="#" class="text-dark text-decoration-none">Clothing</a></p>
+            <p><a href="#" class="text-dark text-decoration-none">Accessories</a></p>
+          </div>
+          <!-- Links -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-primary">Quick Links</h5>
+            <p><a href="aboutus.html" class="text-dark text-decoration-none">About Us</a></p>
+            <p><a href="signup.html" class="text-dark text-decoration-none">Sign Up</a></p>
+            <p><a href="cart.html" class="text-dark text-decoration-none">Cart</a></p>
+            <p><a href="help.html" class="text-dark text-decoration-none">Help</a></p>
+          </div>
+          <!-- Contact -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-primary">Contact</h5>
+            <p><i class="fas fa-home me-3"></i>Stevens Institute of Technology,NJ</p>
+            <p><i class="fas fa-envelope me-3"></i>steve@shopnow.com</p>
+            <p><i class="fas fa-phone me-3"></i> 551 358 1275 </p>
+          </div>
+        </div>
+        <hr class="my-3">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <p class="mb-0">&copy; 2025 STEVE. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
